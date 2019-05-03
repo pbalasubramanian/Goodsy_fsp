@@ -1,0 +1,195 @@
+// @import "./api/sessions.scss";
+ 
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background:rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+ 
+.modal-child {
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // width: 334px;
+    width: 334px;
+    margin-top: 70px;
+    height: 686px;
+    background: white;
+    padding: 18px;
+    border-radius: 3px;
+    display: block;
+    // margin: 0 auto;
+    outline: 0;
+}
+
+.modal-child form {
+    width: 328px;
+}
+
+#modal-h1 {
+    font-family: 'Arimo', sans-serif;
+    font-size: 26px; 
+    font-weight: 500;
+    padding-bottom: 12px; 
+}
+
+#registration {
+    //font-family: 'Arimo', sans-serif;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 14px; 
+    // font-weight: 0; 
+    line-height: 1.6;
+    box-sizing: border-box;
+    margin-top: -25px;
+}
+
+#modal-text {
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    border-right: 16px; 
+    border-left: 16px;
+    width: 100%;
+    border: 1px solid #e1e3df;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#modal-text:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+#modal-text-email {
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    border-right: 16px; 
+    border-left: 16px;
+    width: 100%;
+    border: 1px solid #e1e3df;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#modal-text-email:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+#modal-text-username {
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    border-right: 16px; 
+    border-left: 16px;
+    width: 100%;
+    border: 1px solid #e1e3df;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#modal-text-username:focus {
+    outline: none;
+    border: 1px solid black;
+}
+
+#modal-input {
+    //font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-family: 'Arimo', sans-serif;
+    margin-bottom: 6px; 
+    font-size: 14px; 
+    font-weight: 400;
+    margin-top: 20px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+
+#modal-button {
+    font-family: 'Arimo', sans-serif;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.conditions {
+    font-size: 14px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    padding-top: 35px;
+    color: #595959;
+    line-height: 1.6;
+    padding-right: 9px;
+}
+
+.terms {
+    text-decoration: underline;
+}
+
+#error-red {
+    border: 1px solid red;
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#error-red-email {
+    border: 1px solid red;
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+#error-red-username {
+    border: 1px solid red;
+    height: 48px; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    position: relative; 
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+.errors-ul {
+    display: flex;
+    flex-direction: column;
+    padding-top: 14px;
+}
+
+.errors-li {
+    color: red;
+    font-size: 16px;
+    list-style: none;
+    margin-left: -38px;
+}
