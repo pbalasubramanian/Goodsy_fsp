@@ -10,6 +10,7 @@
 #  price       :float            not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  quantity    :integer
 #
 
 require 'test_helper'

@@ -1,5 +1,10 @@
 // @import "./api/sessions.scss";
  
+body.modal-open {
+    position: fixed;
+    overflow: hidden;
+}
+
 .modal-background {
     position: fixed;
     top: 0;
@@ -10,6 +15,7 @@
     justify-content: center;
     background:rgba(0, 0, 0, 0.7);
     z-index: 10;
+    overflow: auto;
 }
  
 .modal-child {
@@ -19,13 +25,12 @@
     // transform: translate(-50%, -50%);
     // width: 334px;
     width: 334px;
-    margin-top: 70px;
+    margin-top: 40px;
     height: 686px;
     background: white;
     padding: 18px;
     border-radius: 3px;
     display: block;
-    // margin: 0 auto;
     outline: 0;
 }
 
@@ -33,14 +38,14 @@
     width: 328px;
 }
 
-#modal-h1 {
+.modal-h1 {
     font-family: 'Arimo', sans-serif;
     font-size: 26px; 
     font-weight: 500;
     padding-bottom: 12px; 
 }
 
-#registration {
+.registration {
     //font-family: 'Arimo', sans-serif;
     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     font-size: 14px; 
@@ -50,7 +55,7 @@
     margin-top: -25px;
 }
 
-#modal-text {
+.modal-text {
     height: 48px; 
     font-size: 16px; 
     border-radius: 4px; 
@@ -64,50 +69,12 @@
     box-sizing: border-box;
 }
 
-#modal-text:focus {
+.modal-text:focus {
     outline: none;
     border: 1px solid black;
 }
 
-#modal-text-email {
-    height: 48px; 
-    font-size: 16px; 
-    border-radius: 4px; 
-    position: relative; 
-    border-right: 16px; 
-    border-left: 16px;
-    width: 100%;
-    border: 1px solid #e1e3df;
-    margin-bottom: 14px;
-    padding: 7px;
-    box-sizing: border-box;
-}
-
-#modal-text-email:focus {
-    outline: none;
-    border: 1px solid black;
-}
-
-#modal-text-username {
-    height: 48px; 
-    font-size: 16px; 
-    border-radius: 4px; 
-    position: relative; 
-    border-right: 16px; 
-    border-left: 16px;
-    width: 100%;
-    border: 1px solid #e1e3df;
-    margin-bottom: 14px;
-    padding: 7px;
-    box-sizing: border-box;
-}
-
-#modal-text-username:focus {
-    outline: none;
-    border: 1px solid black;
-}
-
-#modal-input {
+.modal-input {
     //font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     font-family: 'Arimo', sans-serif;
     margin-bottom: 6px; 
@@ -119,7 +86,7 @@
     padding-bottom: 15px;
 }
 
-#modal-button {
+.modal-button {
     font-family: 'Arimo', sans-serif;
     width: 100%;
     height: 50px;
@@ -145,31 +112,7 @@
     text-decoration: underline;
 }
 
-#error-red {
-    border: 1px solid red;
-    height: 48px; 
-    font-size: 16px; 
-    border-radius: 4px; 
-    position: relative; 
-    width: 100%;
-    margin-bottom: 14px;
-    padding: 7px;
-    box-sizing: border-box;
-}
-
-#error-red-email {
-    border: 1px solid red;
-    height: 48px; 
-    font-size: 16px; 
-    border-radius: 4px; 
-    position: relative; 
-    width: 100%;
-    margin-bottom: 14px;
-    padding: 7px;
-    box-sizing: border-box;
-}
-
-#error-red-username {
+.error-red {
     border: 1px solid red;
     height: 48px; 
     font-size: 16px; 

@@ -42,18 +42,18 @@ class SessionForm extends React.Component {
             return (
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit}>
-                        <h1 id="modal-h1">Create your account</h1>
-                        <p id="registration">Registration is easy.</p>
-                        <label id="modal-input" htmlFor="email">Email address</label>
-                        <input autoFocus id={this.handleErrors() ? "error-red-email" : "modal-text-email"} type="text" value={this.state.email} onChange={this.update("email")} />
+                        <h1 className="modal-h1">Create your account</h1>
+                        <p className="registration">Registration is easy.</p>
+                        <label className="modal-input" htmlFor="email">Email address</label>
+                        <input autoFocus className={this.handleErrors() ? "error-red" : "modal-text"} type="text" value={this.state.email} onChange={this.update("email")} />
             
-                        <label id="modal-input" htmlFor="first_name">First name</label>
-                        <input id={this.handleErrors() ? "error-red-username" : "modal-text-username"} type="text" value={this.state.username} onChange={this.update("username")} />
+                        <label className="modal-input" htmlFor="first_name">First name</label>
+                        <input className={this.handleErrors() ? "error-red" : "modal-text"} type="text" value={this.state.username} onChange={this.update("username")} />
             
-                        <label id="modal-input" htmlFor="password">Password</label>
-                        <input id={this.handleErrors() ? "error-red" : "modal-text"} type="password" value={this.state.password} onChange={this.update("password")} />
+                        <label className="modal-input" htmlFor="password">Password</label>
+                        <input className={this.handleErrors() ? "error-red" : "modal-text"} type="password" value={this.state.password} onChange={this.update("password")} />
             
-                        <button id="modal-button" type="submit" value={this.props.formType}>Register</button>
+                        <button className="modal-button" type="submit" value={this.props.formType}>Register</button>
                         <p className="conditions">By clicking {this.props.formType}, you agree to Goodsy's <span className="terms">Terms of Use</span> and <span className="terms">Privacy Policy</span>. Goodsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.</p>
                         {this.handleErrors()}
                     </form>
@@ -63,14 +63,14 @@ class SessionForm extends React.Component {
             return (
                 <div className="form-container">
                     <form onSubmit={this.handleSubmit}>
-                        <h1 id="modal-h1">Sign in to continue</h1>
-                        <label id="modal-input" htmlFor="email">Email address</label>
-                        <input autoFocus id={this.handleErrors() ? "error-red-email" : "modal-text-email"} type="text" value={this.state.email} onChange={this.update("email")} />
+                        <h1 className="modal-h1">Sign in to continue</h1>
+                        <label className="modal-input" htmlFor="email">Email address</label>
+                        <input autoFocus className={this.handleErrors() ? "error-red" : "modal-text"} type="text" value={this.state.email} onChange={this.update("email")} />
                         
-                        <label id="modal-input" htmlFor="password">Password</label>
-                        <input id={this.handleErrors() ? "error-red" : "modal-text"} type="password" value={this.state.password} onChange={this.update("password")} />
+                        <label className="modal-input" htmlFor="password">Password</label>
+                        <input className={this.handleErrors() ? "error-red" : "modal-text"} type="password" value={this.state.password} onChange={this.update("password")} />
 
-                        <button id="modal-button" type="submit" value={this.props.formType}>Sign in</button>
+                        <button className="modal-button" type="submit" value={this.props.formType}>Sign in</button>
                         <p className="conditions">By clicking {this.props.formType}, you agree to Goodsy's <span className="terms">Terms of Use</span> and <span className="terms">Privacy Policy</span>. Goodsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.</p>
                         {this.handleErrors()}
                     </form>

@@ -5,3 +5,46 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.delete_all
+User.delete_all
+
+user1 = User.create!(
+    email: "demo@gmail.com", 
+    username: "demouser", 
+    password: "password"
+);
+user2 = User.create!(
+    email: "will@yahoo.com",
+    username: "will",
+    password: "password"
+);
+user3 = User.create!(
+    email:"john@gmail.com", 
+    username: "john", 
+    password: "password"
+);
+user4 = User.create!(
+    email:"liz@yahoo.com", 
+    username: "liz", 
+    password: "password"
+);
+
+p1 = Product.create(
+    user_id: user1.id,
+    title: "Graduation Keychain - Class of - Stamped Penny",
+    description: "This keychain comes with the words engraved on the penny \'Class of\' then we engrave a heart around the year on the penny. From the drop menu choose the year that you would like us to engrave a heart around.",
+    price: 6.95,
+    quantity: 50,
+    category_id: 1
+);
+p1.photo.attach(io: File.open("./app/assets/images/il_794xN.1171814082_mc3f.jpg"), filename:"keychain1.jpg")
+
+p2 = Product.create(
+    user_id: user1.id,
+    title: "Graduation Keychain - Class of - Stamped Penny",
+    description: "This keychain comes with the words engraved on the penny \'Class of\' then we engrave a heart around the year on the penny. From the drop menu choose the year that you would like us to engrave a heart around.",
+    price: 6.95,
+    quantity: 50,
+    category_id: 1
+);
