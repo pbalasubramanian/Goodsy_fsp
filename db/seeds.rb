@@ -46,9 +46,10 @@ p1 = Product.create(
     quantity: 50,
     category_id: 1
 )
-p1.photo.attach(io: File.open("./app/assets/images/il_794xN.1171814082_mc3f.jpg"), filename:"keychain1.jpg")
-# file = open('https://s3.amazonaws.com/goodsy-pro/keychain1.jpg')
-# p1.photo.attach(io: file, filename: 'keychain1.jpg')
+# p1.photo.attach(io: File.open("./app/assets/images/il_794xN.1171814082_mc3f.jpg"), filename:"keychain1.jpg")
+
+file = open('https://s3.amazonaws.com/goodsy-pro/keychain1.jpg')
+p1.photo.attach(io: file, filename: 'keychain1.jpg')
 
 # p2 = Product.create(
 #     user_id: user1.id,

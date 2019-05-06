@@ -32,11 +32,13 @@ $font-splash-mw: 'Merriweather', serif;
     // width: 211.66667%;
     // padding-left: 158px;
     // was commented earlier
-    padding-right: 18px;
+    margin-right: 18px;
     display: flex;
     height: 330px;
     width: 870px;
     max-width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
 }
 
 .in-left {
@@ -76,7 +78,6 @@ $font-splash-mw: 'Merriweather', serif;
     width: inherit;
     background-size: cover;
     background-image: url("https://i.etsystatic.com/ij/8b298a/1904419495/ij_halfxhalf.1904419495_m96xkqjw.jpg?version=0");
-    // border-radius: 2px;
 }
 
 .right-link {
@@ -86,13 +87,13 @@ $font-splash-mw: 'Merriweather', serif;
 .right {
     display: flex;
     flex-direction: column;
-    width: 362px;
+    width: 402px;
     height: 330px;
     border-radius: 4px;
 }
 
 .right-up1 {
-    padding-bottom: 24px;
+    padding-bottom: 18px;
     width: inherit;
     height: 230px;
 }
@@ -102,12 +103,16 @@ $font-splash-mw: 'Merriweather', serif;
     width: inherit;
     background-size: cover;
     background-image: url("https://i.etsystatic.com/ij/7daef4/1904111273/ij_halfxhalf.1904111273_kc45kjge.jpg?version=0");
+    border: 1px solid lightgray;
+    border-radius: 4px;
 }
 
 .right-down {
     width: inherit;
     height: 100px;
     background-color: #fdd95c;
+    border: 1px solid lightgray;
+    border-radius: 4px;
 }
 
 .right-down-text {
@@ -123,8 +128,8 @@ $font-splash-mw: 'Merriweather', serif;
     display: flex; 
     flex-direction: row; 
     justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: -100px;
 }
 

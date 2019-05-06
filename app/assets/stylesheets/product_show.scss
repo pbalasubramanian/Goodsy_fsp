@@ -1,0 +1,120 @@
+.product_show {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_photo {
+    width:500px;
+    height:400px;
+    object-fit: cover;
+}
+
+.product_show_top_div {
+    display: flex;
+    flex-direction: row
+}
+
+.product_price, .product_title {
+    font-size: 26px;
+    font-weight: inherit;
+    line-height: 26px;
+    margin-left: inherit;
+    margin-top: 23px;
+    font-family: inherit;
+    padding-left: 53px;
+}
+
+.product_quantity_h2 {
+    font-size: 16px;
+    font-weight: 00;
+    line-height: 26px;
+    
+    margin-top: 20px;
+    padding-left: 53px;
+    font-family: inherit;
+}
+
+.product_quantity {
+    border: 1px solid black;
+    width: 16px;
+    margin-left: 8px;
+    border-radius: 0.5px
+}
+// .add-to-cart-button{
+//     padding-top: 2px;
+//     border: 1px solid ;
+//     padding-bottom: 3px;
+//     height: 42px;
+//     font-size: 18px;
+//     font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+//     background-color:black;
+//     color: white;
+//     width: 322px;
+//     // right: 5px;
+//     position: relative;
+//     border-radius: 5px
+// }
+
+.product_description {
+    display: block;
+    line-height: 1.71429;
+    color: #222;
+    margin-top: 15px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 18px;
+    margin-right:1%
+}
+
+.description_h2 {
+    margin-top: 12px;
+    font-weight: 500;
+    color:#222;
+    font-size: 24px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    line-height: 1.6
+}
+
+.cart-div {
+    // margin-top:23px;
+    padding-left:10px;
+}
+
+.product_show_cart_div {
+    margin-left: 54px;
+    margin-top: 33px;
+}
+
+// .fa-shopping-cart {
+//     color: black;
+//     font-size: 25px;
+// }
+
+.shipping {
+    font-size: 18px;
+    font-weight: inherit;
+    line-height: 26px;
+    margin-left: inherit;
+    margin-top: 26px;
+    font-family: inherit;
+    padding-left: 53px;
+    list-style: none;
+}
+
+.product_add_cart {
+    font-size: 15px;
+    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    background-color: black;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: 1px solid;
+    border-radius: 5px;
+    // margin-right: 12px;
+    width: 100%;
+}

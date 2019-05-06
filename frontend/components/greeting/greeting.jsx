@@ -11,20 +11,14 @@ class Greeting extends React.Component {
         this.welcome = this.welcome.bind(this);
     }
 
-    handleSignup() {
-        $("html").css({ "overflow-y": "hidden" });
-        this.props.openModal('signup');
-    }
-
     sessionLinks() {
         return (
             <nav className="header-right">
-                <Link to={"/"} className="register">
+                <Link className="sell" to={"/products/new"}>
                     Sell on Goodsy
                 </Link>
-
-                {/* <button onClick={() => this.props.openModal('signup')} className="register">Register</button> */}
-                <button onClick={this.handleSignup} className="register">Register</button>
+                
+                <button onClick={() => this.props.openModal('signup')} className="register">Register</button>
                 <button onClick={() => this.props.openModal('login')} className="login">Sign in</button>
                 <button onClick={() => this.props.demoLogin()} className="login">Demo User</button>
             </nav>
@@ -34,7 +28,7 @@ class Greeting extends React.Component {
     personalGreeting() {
         return (
             <div className="navbar-right-user">
-                <Link to={"/"} className="register">
+                <Link className="sell" to={"/products/new"}>
                     Sell on Goodsy
                 </Link>
 

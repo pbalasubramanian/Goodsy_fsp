@@ -6,8 +6,9 @@ import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import Splash from './splash/splash';
 import ProductsIndexContainer from './products/product_index_container';
-// import LoginFormContainer from './session_form/login_form_container';
-// import SignupFormContainer from './session_form/signup_form_container';
+import ProductShowContainer from './products/product_show_container';
+import CreateProductContainer from './products/create_product_container';
+import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div className="overall">
@@ -17,6 +18,8 @@ const App = () => (
 
         <Switch>
             <Route exact path="/" component={Splash} />
+            <ProtectedRoute exact path="/products/new" component={CreateProductContainer} />
+            <Route exact path="/products/:productId" component={ProductShowContainer} /> 
             <Route exact path="/products/" component={ProductsIndexContainer} />
             <Redirect to="/" />
         </Switch>
