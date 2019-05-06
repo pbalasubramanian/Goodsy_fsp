@@ -33,11 +33,6 @@ user4 = User.create!(
 )
 
 
-
-# demo_user = User.create(username: "Andy", email: "andy@email.com", password: "password")
-# file = open('https://s3.amazonaws.com/<your_bucket>/<some_file>.jpg')
-# demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
-
 p1 = Product.create(
     user_id: user1.id,
     title: "Graduation Keychain - Class of - Stamped Penny",
@@ -48,7 +43,8 @@ p1 = Product.create(
 )
 # p1.photo.attach(io: File.open("./app/assets/images/il_794xN.1171814082_mc3f.jpg"), filename:"keychain1.jpg")
 
-file = open('https://s3.amazonaws.com/goodsy-pro/keychain1.jpg')
+# file = open('https://s3.amazonaws.com/goodsy-pro/keychain1.jpg')
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/keychain1.jpg')
 p1.photo.attach(io: file, filename: 'keychain1.jpg')
 
 # p2 = Product.create(
