@@ -25,20 +25,25 @@ class productForm extends React.Component {
         if (!this.state.photoUrl) {
             alert("Please upload a file.")
         }
-        const id = this.props.currentUser;
+        
         const formData = new FormData();
         for (let key in this.state) {
+            // alert("key==" + key);
+            // alert(this.state[key]);
             if (key === 'user_id') {
-                formData.append(`product[${key}]`, this.props.currentUser)
+                formData.append(`product[${key}]`, this.props.currentUser);
             } else {
-                formData.append(`product[${key}]`, this.state[key])
+                formData.append(`product[${key}]`, this.state[key]);
             }
         }
         if (this.state.photoFile) {
             formData.append('product[photo]', this.state.photoFile);
         }
 
+        // alert(formData);
+        // console.log(formData);
         this.props.action(formData, this.props.product.id)
+        // this.props.action(formData)
             .then((railsitem) => {
                 this.props.history.push(`/products/`)
             })

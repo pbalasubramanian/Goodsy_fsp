@@ -22,10 +22,10 @@ export const createProduct = (product) => (
     })
 );
 
-export const updateProduct = (product) => (
+export const updateProduct = (product, productId) => (
     $.ajax({
         method: "PATCH",
-        url: `api/products/${product.id}`,
+        url: `api/products/${productId}`,
         data: product,
         contentType: false,
         processData: false

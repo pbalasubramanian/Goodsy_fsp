@@ -42,8 +42,8 @@ export const createProduct = (product) => dispatch => (
                err => dispatch(receiveErrors(err.responseJSON)) )
 );
 
-export const updateProduct = (product) => dispatch => (
-    ProductApiUtil.updateProduct(product)
+export const updateProduct = (product, productId) => dispatch => (
+    ProductApiUtil.updateProduct(product, productId)
         .then( product => dispatch(receiveProduct(product)),
                err => dispatch(receiveErrors(err.responseJSON)) )
 );

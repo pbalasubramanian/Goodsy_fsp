@@ -32,7 +32,6 @@ user4 = User.create!(
     password: "password"
 )
 
-
 p1 = Product.create(
     user_id: user1.id,
     title: "Graduation Keychain - Class of - Stamped Penny",
@@ -68,3 +67,80 @@ p3 = Product.create(
 )
 file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/sweater1.jpg')
 p3.photo.attach(io: file, filename: 'sweater1.jpg')
+
+p4 = Product.create(
+    user_id: user1.id,
+    title: "Coffee T-Shirt, Food Shirt, Coffee Screen Printed T Shirt",
+    description: "This is a 100% cotton screen printed graphic t shirt with various ways to brew coffee. This coffee tshirt listing is for a Bella + Canvas 100% combed and ringspun cotton tee. This tee is lighter and softer than our Gildan tees.",
+    price: 25,
+    quantity: 20,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/shirt_coffee.jpg')
+p4.photo.attach(io: file, filename: 'shirt_coffee.jpg')
+
+p5 = Product.create(
+    user_id: user2.id,
+    title: "Message in a Bottle, Laser Engraved, Our Story, USB Flash Drive, Usb Stick, Memory Stick, 8GB, 16GB",
+    description: "This is for 1 \"Message in a Bottle\" Glass Bottle Flash Drives with Cork Plug . Perfect for special events: Weddings, Bridal Showers, Engagements, Birthdays, Graduations",
+    price: 12.95,
+    quantity: 30,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/usb_bottle.jpg')
+p5.photo.attach(io: file, filename: 'usb_bottle.jpg')
+
+p6 = Product.create(
+    user_id: user1.id,
+    title: "Multicolor Mouse Pad Marble Pad Mouse Color MousePad",
+    description: "Are you looking for a bright, colorful and stylish Mousepad for your desktop? Great! I'm glad to introduce you Mousepads in my shop! All of them are made by myself with best wishes to their future owners.",
+    price: 10.75,
+    quantity: 35,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/mousepad.jpg')
+p6.photo.attach(io: file, filename: 'mousepad.jpg')
+
+p7 = Product.create(
+    user_id: user3.id,
+    title: "contemporary wall art,Palette Knife Painting,colorful Landscape painting",
+    description: "A new type of Abstract Wall Painting. This painting is definitely a great gift.It's also Perfect choice for home and office decorations. Medium: Acrylic on gallery-wrapped stretched canvas, palette knife",
+    price: 378,
+    quantity: 5,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/wall_art_knife.jpg')
+p7.photo.attach(io: file, filename: 'wall_art_knife.jpg')
+
+p8 = Product.create(
+    user_id: user2.id,
+    title: "Sunflowers painting still life oil painting on canvas yellow flower painting",
+    description: "Sunflowers painting still life oil painting on canvas yellow flower painting original Yellow painting Bouquet Floral painting green apples",
+    price: 225,
+    quantity: 5,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/sunflower_oil_painting.jpg')
+p8.photo.attach(io: file, filename: 'sunflower_oil_painting.jpg')
+
+p9 = Product.create(
+    user_id: user3.id,
+    title: "Handmade fiber art/quilting/--tulips-customized products",
+    description: "This fiber art piece is self designed and made by colorful hand dye batik fabric. The thread painting and fabric painting technique add great dimension and texture to this quilt.",
+    price: 144.75,
+    quantity: 5,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/handmade_fiberart.jpg')
+p9.photo.attach(io: file, filename: 'handmade_fiberart.jpg')
+
+p10 = Product.create(
+    user_id: user4.id,
+    title: "Stained Glass Suncatcher, Multi Coloured Star, Handmade Rainbow Art Panel",
+    description: "Handcrafted Stained Glass Suncatcher Panel. Multi Coloured Stained Glass Star. Eight Point Star measuring 14cm wide (approx). Attached is an attractive chain with a hanging ring.",
+    price: 225,
+    quantity: 5,
+    category_id: 1
+)
+file = open('https://s3-us-west-1.amazonaws.com/goodsy-pro/stainedglass_suncatcher.jpg')
+p10.photo.attach(io: file, filename: 'stainedglass_suncatcher.jpg')
