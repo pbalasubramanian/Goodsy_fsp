@@ -160,7 +160,7 @@ class productForm extends React.Component {
                                 <h6>Tips:Use natural light and no flash.
                                       Include a common object for scale.
                                       Show the item being held, worn, or used.
-                    Shoot against a clean, simple background.</h6>
+                                      Shoot against a clean, simple background.</h6>
                             </div>
                             <div className="image-right">
                                 <div className="preview-image">{preview}
