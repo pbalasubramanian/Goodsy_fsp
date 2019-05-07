@@ -13,8 +13,8 @@ const productsReducer = (state = {}, action) => {
         case REMOVE_PRODUCT:
             delete nextState[action.productId];
             return nextState;
-        case RECEIVE_USER:
-            return action.payload.products;
+        // case RECEIVE_USER:
+        //     return action.payload.products;
         default:
             return state;
     }

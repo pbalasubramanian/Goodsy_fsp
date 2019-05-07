@@ -17,7 +17,7 @@ class Greeting extends React.Component {
                 <Link className="sell" to={"/products/new"}>
                     Sell on Goodsy
                 </Link>
-                
+
                 <button onClick={() => this.props.openModal('signup')} className="register">Register</button>
                 <button onClick={() => this.props.openModal('login')} className="login">Sign in</button>
                 <button onClick={() => this.props.demoLogin()} className="login">Demo User</button>
@@ -32,12 +32,13 @@ class Greeting extends React.Component {
                     Sell on Goodsy
                 </Link>
 
-                {/* <Link to={`/users/${this.props.currentUser.id}`}> */}
+                
                     {/* <h2 className="username"> */}
-                        <i className="fa fa-user-circle"></i>&nbsp;
-                        {this.props.currentUser.username}&nbsp;
-                    {/* </h2> */}
-                {/* </Link> */}
+                        {/* <i className="fa fa-user-circle"><span>you</span></i> */}
+                <i className="fa fa-user-circle"></i>&nbsp;
+                <Link className="username" to={`/users/${this.props.currentUser.id}`}>
+                    {this.props.currentUser.username}&nbsp; 
+                </Link>
 
                 <button className="login" onClick={this.props.logout}>Log out</button>
             </div>

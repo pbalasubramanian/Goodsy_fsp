@@ -1,0 +1,36 @@
+.user-show-products{
+    margin-top:15px;
+    display: flex;
+    flex-wrap: wrap;
+    color:black;
+
+}
+.user-show-image{
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+}
+.user-show-products-details{
+    margin: 25px;
+    color:black;
+
+}
+.user-show-product-title{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.link-edit-delete{
+    width: 156px;
+    padding-left: 23px;
+    display: flex;
+    margin-top: -18px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link-edit-delete:hover{
+    text-decoration: underline;
+}
