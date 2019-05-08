@@ -120,7 +120,8 @@ class productForm extends React.Component {
                             </div>
 
                             <div className="form-description">
-                                <div className="desc-label">Description
+                                <div className="form-label">
+                                    <h3 className="desc-label">Description</h3>
                                     <h6>Start with a brief overview that describes your item's finest features.List details like dimensions and key features in easy-to-read bullet points.Tell buyers a bit about your process or the story behind this item.
                                     </h6>
                                 </div>

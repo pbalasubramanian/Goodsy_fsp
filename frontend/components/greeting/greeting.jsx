@@ -62,10 +62,15 @@ class Greeting extends React.Component {
                     <div className="navbar-right">
                         {this.welcome()}
                         {/* <i className="fa fa-shopping-cart" />Cart */}
-                        <button id="cart-button">
+                        {/* <button id="cart-button">
                             <i className="fa fa-shopping-cart"></i>
                             <p className="cart-label">Cart</p>
-                        </button>
+                        </button> */}
+                        <Link to="/cart" className="cart-div">
+                            <span id="itemCount"></span>
+                            <i className="fa fa-shopping-cart" />
+                            <p className="cart-label">Cart</p>
+                        </Link>
                     </div>
                 </nav>
             </div>

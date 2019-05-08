@@ -10,6 +10,7 @@ import ProductShowContainer from './products/product_show_container';
 import CreateProductContainer from './products/create_product_container';
 import UserShowContainer from './users/user_show_container';
 import EditProductContainer from './products/edit_product_container';
+import CartContainer from './carts/cart_container';
 import { ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
             <ProtectedRoute exact path="/products/new" component={CreateProductContainer} />
             <Route exact path="/products/:productId" component={ProductShowContainer} /> 
             <Route exact path="/products/" component={ProductsIndexContainer} />
+            <Route exact path='/cart' component={CartContainer} />
             <Route path="/products/:productId/edit" component={EditProductContainer} />
             <Redirect to="/" />
         </Switch>

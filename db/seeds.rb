@@ -9,6 +9,7 @@
 require 'open-uri'
 
 Product.delete_all
+Cart.delete_all
 User.delete_all
 
 user1 = User.create!(
@@ -31,6 +32,11 @@ user4 = User.create!(
     username: "liz", 
     password: "password"
 )
+
+Cart.create!(user_id: user1.id)
+Cart.create!(user_id: user2.id)
+Cart.create!(user_id: user3.id)
+Cart.create!(user_id: user4.id)
 
 p1 = Product.create(
     user_id: user1.id,

@@ -22,4 +22,7 @@ class Product < ApplicationRecord
         class_name: :User
 
     has_one_attached :photo
+
+    has_many :cart_items, dependent: :destroy
+
 end

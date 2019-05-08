@@ -22,6 +22,8 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Product
 
+    has_one :cart, dependent: :destroy
+    
     attr_reader :password
 
     after_initialize :ensure_session_token

@@ -6,7 +6,7 @@ class ProductShow extends React.Component {
         super(props)
         this.state = {
             quantity: null,
-            // shopping_cart_id: null,
+            cart_id: null,
             product_id: null
         };
         this.addToCart = this.addToCart.bind(this);
@@ -23,11 +23,27 @@ class ProductShow extends React.Component {
             this.props.openModal("login");
         } else {
             if (this.state.quantity) {
-                // this.state.shopping_cart_id = this.props.cartId
-                this.props.createCartItem(this.state)
-                window.alert(`${this.state.quantity} ${this.props.product.title}'s added to your cart!`)
+                this.state.cart_id = this.props.currentUser.cart.id;
+                // alert(this.state.cart_id);
+                this.props.createCartItem(this.state);
+                    // .then( (item) => this.props.fetchCartItems(this.props.currentUser.cart.id)
+                    // .then( (cartItems) => {
+                    //     let counter = 0
+                    //     Object.values(cartItems).forEach(item => {
+                    //         alert(item.quantity);
+                    //         counter += item.quantity;
+                    //     });
+                    //     alert(counter);
+
+                    //     if (counter === 0) {
+                    //         $('#itemCount').html('').css('display', 'none');
+                    //     } else {
+                    //         $('#itemCount').html(counter).css('display', 'block');
+                    //     }
+                    // }));
+                alert(`${this.state.quantity} ${this.props.product.title}'s added to your cart!`);
             } else {
-                window.alert("Please select a quantity")
+                alert("Please select a quantity");
             }
         }
     }
