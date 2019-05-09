@@ -18,6 +18,15 @@ class Cart extends React.Component {
     }
 
     cartList(cartItems, products, deleteCartItem) {
+        if (!this.props.cartItems) {
+            return <div className="empty-cart">
+                <p>Your cart is looking empty.</p>
+                <Link className="link-to-index" to="/products">
+                    Click here to fill it up!
+                </Link>
+            </div>;
+        }
+
         let itemsArray = Object.values(cartItems);
         // alert(itemsArray.length);
         if (itemsArray.length === 0) {
@@ -25,7 +34,7 @@ class Cart extends React.Component {
                 <p>Your cart is looking empty.</p>
                 <Link className="link-to-index" to="/products">
                     Click here to fill it up!
-          </Link>
+                </Link>
             </div>;
         }
         return (
@@ -38,17 +47,22 @@ class Cart extends React.Component {
     calcTotal(cartItems, products) {
         let total = 0
 
-        Object.values(cartItems).forEach((item) => {
-            total += (item.quantity * products[item.product_id].price)
-        })
+        if( cartItems && products ) {
+            Object.values(cartItems).forEach((item) => {
+                total += (item.quantity * products[item.product_id].price)
+            })
+        }
         return total.toLocaleString();
     }
 
     totalItems(cartItems) {
         let counter = 0
-        Object.values(cartItems).forEach(item => {
-            counter += item.quantity
-        });
+
+        if( cartItems ) {
+            Object.values(cartItems).forEach(item => {
+                counter += item.quantity
+            });
+        }
 
         // alert($('#itemCount').html);
         // if( counter === 0 ) {
@@ -70,7 +84,14 @@ class Cart extends React.Component {
     }
 
     render() {
-        if (!this.props.cartItems) return null
+        // if (!this.props.cartItems) {
+        //     return <div className="empty-cart">
+        //         <p>Your cart is looking empty.</p>
+        //         <Link className="link-to-index" to="/products">
+        //             Click here to fill it up!
+        //         </Link>
+        //     </div>;
+        // }
 
         return <div className="cart-main">
             <h1>Shopping Cart</h1>
