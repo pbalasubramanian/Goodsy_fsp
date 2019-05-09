@@ -1,5 +1,6 @@
 import React from 'react';
-
+import CreateReviewContainer from '../reviews/create_review_container';
+import ReviewIndexContainer from '../reviews/review_index_container';
 
 class ProductShow extends React.Component {
     constructor(props) {
@@ -92,6 +93,14 @@ class ProductShow extends React.Component {
                         {this.props.product.description}
                     </div>
 
+                    <div id="show-reviews">
+                        <CreateReviewContainer product={this.props.product} />
+                        <ReviewIndexContainer
+                            product={this.props.product}
+                            user_id={this.props.currentUser}
+                        /> 
+                    </div>
+                    
                 </div>
             )
         } else {

@@ -66,7 +66,7 @@
     font-size: 16px;
     font-family: inherit;
     font-weight: 250;
-    padding-top: 10px;
+    // padding-top: 10px;
 }
 
 .register, .sell {
@@ -145,7 +145,7 @@
 .cart-div {
     background-color: white;
     border: 0px solid white;
-    margin-top: 16px;
+    margin-top: 6px;
 }
 
 .cart-label {
@@ -157,9 +157,119 @@
     // padding-top: 2px; 
     // padding-left: 5px; 
     // margin-right: 30px;
- }
+}
 
- #itemCount {
+.category-div {
+  width: 100%;
+//   margin-left: -36px;
+  border-top: 1px solid #e5e4e2;
+//   border-bottom: 1px solid #e5e4e2;
+  font-family: inherit;
+}
+
+.nav-category {
+
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-family: inherit;
+
+
+    // button {
+    //   display: inline-block;
+    //   position: relative;
+    //   padding-bottom: 3px;
+    //   outline: none;
+    //   font-size: 14px;
+    //   background-color: white;
+    //   border: none;
+    // }
+
+    // button:after {
+    //   content: '';
+    //   display: block;
+    //   margin: auto;
+    //   height: 3px;
+    //   width: 0px;
+    //   background: transparent;
+    //   transition: width .5s ease, background-color .5s ease;
+    // }
+
+    // button:hover {
+    //   cursor: pointer;
+    // }
+
+    // button:hover:after {
+    //   width: 100%;
+    //   background: black;
+    // }
+}
+
+.category-products {
+    cursor: pointer;
+    font-size: 16px;
+    color:black;
+    background-color: white;
+    border: 0px;
+    text-decoration: none;
+    margin-right: 12px;
+    font-weight: 400;
+}
+
+.category-products:hover {
+    text-decoration: underline;
+}
+
+.search-form {
+  padding-top: 37px;
+  .inputSearch {
+    padding-left: 7px;
+    height: 28px;
+    font-size: 15px;
+    font-family: inherit;
+    width: 350px;
+    border: 1px solid #e5e4e2;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #e5e4e2;
+  }
+
+  .inputSearch:focus {
+    border: 1px solid #e5e4e2;
+    background-color: white;
+  }
+
+  .search-button {
+    padding-top: 3px;
+    border: 1px solid black;
+    padding-bottom: 3px;
+    height: 32px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color:black;
+    color:white;
+    width: 80px;
+    right: 5px;
+    position: relative;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .search-button:focus {
+    outline: none;
+  }
+
+  .search-button:hover {
+    // background-color: #f56416;
+    cursor: pointer;
+  }
+}
+
+
+#itemCount {
   position: absolute;
   display: none;
 //   top: -10px;

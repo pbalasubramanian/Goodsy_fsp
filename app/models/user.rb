@@ -23,7 +23,12 @@ class User < ApplicationRecord
         class_name: :Product
 
     has_one :cart, dependent: :destroy
-    
+
+    has_many :reviews, 
+        primary_key: :id, 
+        foreign_key: :reviewer_id,
+        class_name: :Review
+
     attr_reader :password
 
     after_initialize :ensure_session_token

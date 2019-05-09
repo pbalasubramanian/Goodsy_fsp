@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 class UserShow extends React.Component {
     componentDidMount() {
@@ -46,4 +46,4 @@ class UserShow extends React.Component {
     }
 }
 
-export default UserShow;
+export default withRouter(UserShow);

@@ -25,4 +25,17 @@ class Product < ApplicationRecord
 
     has_many :cart_items, dependent: :destroy
 
+    has_many :reviews, 
+        primary_key: :id, 
+        foreign_key: :product_id, 
+        class_name: :Review
+
+    def self.search_results(query_params)
+        return Product.all if query_params == ""
+       
+        param = "%" + query_params.downcase + '%'
+    
+        products = Product.where('lower(title) LIKE ?', param).to_a
+    end
+
 end

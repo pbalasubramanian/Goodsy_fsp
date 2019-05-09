@@ -1,4 +1,4 @@
-json.extract! @product, :id, :user_id, :title, :description, :price, :quantity, :category_id
+json.extract! @product, :id, :user_id, :title, :description, :price, :quantity, :category_id, :updated_at
 json.photoUrl url_for(@product.photo)
 
 json.user do

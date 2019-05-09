@@ -27,7 +27,7 @@ class Cart extends React.Component {
             </div>;
         }
 
-        let itemsArray = Object.values(cartItems);
+        let itemsArray = Object.values(cartItems).reverse();
         // alert(itemsArray.length);
         if (itemsArray.length === 0) {
             return <div className="empty-cart">

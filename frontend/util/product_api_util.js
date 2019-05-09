@@ -38,3 +38,11 @@ export const deleteProduct = (id) => (
         url: `api/products/${id}`,
     })
 );
+
+export const productSearch = (title) => {
+    return $.ajax({
+        method: 'GET',
+        url: 'api/search',
+        data: { search: { title } }
+    })
+};

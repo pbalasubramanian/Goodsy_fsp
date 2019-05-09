@@ -49,7 +49,12 @@ export const updateProduct = (product, productId) => dispatch => (
 );
 
 export const deleteProduct = (id) => dispatch => (
-    ProductApiUtil.deleteProduct(id).
-        then( product => dispatch(removeProduct(product.productId)),
+    ProductApiUtil.deleteProduct(id)
+        .then( product => dispatch(removeProduct(product.id) ),
               err => dispatch(receiveErrors(err.responseJSON)) )
 )
+
+export const searchProducts = title => dispatch => (
+    ProductApiUtil.productSearch(title)
+        .then(products => dispatch(receiveProducts(products)))
+);

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import SearchForm from '../search';
 
 
 class Greeting extends React.Component {
@@ -57,7 +58,9 @@ class Greeting extends React.Component {
                         <Link to="/" className="header-link">
                             <h1 className="logo">Goodsy</h1>
                         </Link>
+                        {/* <SearchForm search={this.props.searchProducts} /> */}
                     </div>
+                    
 
                     <div className="navbar-right">
                         {this.welcome()}
@@ -73,10 +76,17 @@ class Greeting extends React.Component {
                         </Link>
                     </div>
                 </nav>
+                <div className="category-div">
+                    <nav className="nav-category">
+                        {/* <button>All Products</button> */}
+                        <Link className="category-products" to={"/products/"} onClick={() => this.props.fetchProducts()}>
+                            All Products
+                        </Link>
+                    </nav>
+                </div>
             </div>
         );
     }
 };
 
-
-export default Greeting;
+export default withRouter(Greeting);
