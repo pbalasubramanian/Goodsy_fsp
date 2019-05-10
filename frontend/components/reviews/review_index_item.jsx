@@ -13,20 +13,22 @@ const ReviewIndexItem = (props) => {
 
     // alert(user_id.id)
     // alert(review.reviewer_id)
-    if (user_id.username === review.reviewer_id) {
-        editReview =
-            <div id="edit-review-button">
-                <Link to={`/`}>Update your review</Link>
-            </div>;
+    if( user_id ) {
+        if (user_id.username === review.reviewer_id) {
+            editReview =
+                <div id="edit-review-button">
+                    <Link to={`/`}>Update your review</Link>
+                </div>;
 
-        // deleteReview = <button id="delete-review-button" onClick={() => handleDelete(review.id)}>Delete review</button>;
+            // deleteReview = <button id="delete-review-button" onClick={() => handleDelete(review.id)}>Delete review</button>;
+        }
     }
 
     let dateObj = new Date(review.created_at);
     // alert(dateObj.toLocaleString());
 
+    if( !review.user ) {
     return (
-
         <div className="reviews-area">
             <li>
                 <div className="review-block">
@@ -69,6 +71,10 @@ const ReviewIndexItem = (props) => {
 
         </div>
     )
+    } else {
+        return null;
+    }
+
 }
 
 export default withRouter(ReviewIndexItem); 
