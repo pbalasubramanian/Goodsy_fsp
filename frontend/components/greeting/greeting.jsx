@@ -22,7 +22,9 @@ class Greeting extends React.Component {
 
                 <button onClick={() => this.props.openModal('signup')} className="register">Register</button>
                 <button onClick={() => this.props.openModal('login')} className="login">Sign in</button>
+                <div className="dummy">l</div>
                 <button onClick={() => this.props.demoLogin()} className="login">Demo User</button>
+                <div className="dummy">l</div>
             </div>
             // </nav>
         )
@@ -38,12 +40,13 @@ class Greeting extends React.Component {
                 
                     {/* <h2 className="username"> */}
                         {/* <i className="fa fa-user-circle"><span>you</span></i> */}
-                <i className="fa fa-user-circle"></i>&nbsp;
+                &nbsp;&nbsp;<i className="fa fa-user-circle"></i>&nbsp;
                 <Link className="username" to={`/users/${this.props.currentUser.id}`}>
                     {this.props.currentUser.username}&nbsp; 
                 </Link>
 
                 <button className="login" onClick={this.props.logout}>Log out</button>
+                <div className="dummy">l</div>
             </div>
         );
     }
@@ -60,7 +63,7 @@ class Greeting extends React.Component {
                         <Link to="/" className="header-link">
                             <h1 className="logo">Goodsy</h1>
                         </Link>
-                        {/* <SearchForm search={this.props.searchProducts} /> */}
+                        <SearchForm search={this.props.searchProducts} />
                     </div>
                     
 
@@ -71,6 +74,7 @@ class Greeting extends React.Component {
                             <i className="fa fa-shopping-cart"></i>
                             <p className="cart-label">Cart</p>
                         </button> */}
+                        
                         <Link to="/cart" className="cart-div">
                             <span id="itemCount"></span>
                             <i className="fa fa-shopping-cart" />

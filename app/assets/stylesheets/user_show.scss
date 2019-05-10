@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
 .user-show-products{
     margin-top:15px;
     display: flex;
@@ -22,13 +27,20 @@
     text-overflow: ellipsis;
     
 }
-.link-edit-delete{
+
+.link-edit-delete {
     width: 156px;
     padding-left: 23px;
     display: flex;
     margin-top: -18px;
     flex-direction: row;
     justify-content: space-between;
+
+    button {
+        background-color: black;
+        color: white;
+        border: none;
+    }
 }
 
 .link-edit-delete:hover{

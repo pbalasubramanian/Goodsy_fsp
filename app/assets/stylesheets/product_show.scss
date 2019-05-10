@@ -1,9 +1,12 @@
+$font-show: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+
 .product_show {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 55px;
     display: flex;
     flex-direction: column;
+    font-family: $font-show;
 }
 
 .product_photo {
@@ -18,30 +21,39 @@
 }
 
 .product_price, .product_title {
-    font-size: 26px;
-    font-weight: inherit;
+    font-size: 18px;
     line-height: 26px;
     margin-left: inherit;
     margin-top: 23px;
-    font-family: inherit;
     padding-left: 53px;
 }
 
+.product_title {
+    // font-family: "Guardian-EgypTT",Arial,sans-serif;
+    font-weight: inherit;
+}
+
+.product_price {
+    // font-family: $font-show;
+    font-weight: 500;
+}
+
 .product_quantity_h2 {
-    font-size: 16px;
-    font-weight: 00;
+    font-size: 15px;
+    font-weight: 100;
     line-height: 26px;
     
     margin-top: 20px;
     padding-left: 53px;
-    font-family: inherit;
+    // font-family: inherit;
 }
 
 .product_quantity {
     border: 1px solid black;
-    width: 16px;
+    width: 40px;
     margin-left: 8px;
-    border-radius: 0.5px
+    // border-radius: 0.5px;
+    background-color: white;
 }
 // .add-to-cart-button{
 //     padding-top: 2px;
@@ -62,10 +74,13 @@
     display: block;
     line-height: 1.71429;
     color: #222;
+    margin-left: inherit;
     margin-top: 15px;
     word-break: break-word;
     overflow-wrap: break-word;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 100;
+    padding-left: 53px;
     margin-right:1%
 }
 
@@ -73,8 +88,9 @@
     margin-top: 12px;
     font-weight: 500;
     color:#222;
-    font-size: 24px;
-    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-size: 18px;
+    margin-left: inherit;
+    // font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     line-height: 1.6
 }
 
@@ -96,17 +112,28 @@
 .shipping {
     font-size: 18px;
     font-weight: inherit;
-    line-height: 26px;
+    line-height: 1.6;
     margin-left: inherit;
     margin-top: 26px;
-    font-family: inherit;
+    // font-family: inherit;
     padding-left: 53px;
     list-style: none;
+
+    .s2 {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .s3 {
+        font-size: 15px;
+        font-weight: 100;
+    }
 }
 
 .product_add_cart {
     font-size: 15px;
-    font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    // font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+    font-family: $font-show;
     background-color: black;
     color: white;
     padding-left: 0px;

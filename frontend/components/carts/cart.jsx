@@ -11,11 +11,15 @@ class Cart extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.currentUser) {
+        // alert("out here");
+        if ( this.props.currentUser ) {
+            // alert("in here");
+            // alert(this.props.currentUser);
             this.props.fetchProducts()
                 .then( (prod) => this.props.fetchCartItems(this.props.currentUser.cart.id) );
         }
     }
+
 
     cartList(cartItems, products, deleteCartItem) {
         if (!this.props.cartItems) {
@@ -94,7 +98,7 @@ class Cart extends React.Component {
         // }
 
         return <div className="cart-main">
-            <h1>Shopping Cart</h1>
+            {/* <h1>Shopping Cart</h1> */}
             <div className="cart-container">
                 <div className="cart-items">
                     <div className="cart-item-list">
@@ -105,21 +109,21 @@ class Cart extends React.Component {
                         )}
                     </div>
                 </div>
-                <div className="cart-total">
+                {/* <div className="cart-total"> */}
                     <div className="cart-total-container">
                         <div className="cart-total-information">
                             <ul className="cart-total-left">
-                                <li>{`Subtotal:`}</li>
-                                <li className="total-cart-items">{`Total Items:`}</li>
+                                <li>{`Item(s) total:`}</li>
+                                {/* <li className="total-cart-items">{`Total Items:`}</li> */}
                                 {/* <li className="tax">{`Tax:`}</li> */}
                                 <li className="shiping">{`Shipping:`}</li>
                                 <li className="estimated-total">{`Total:`}</li>
                             </ul>
                             <ul className="cart-total-right">
                                 <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
-                                <li className="total-cart-items">{`${this.totalItems(this.props.cartItems)}`}</li>
+                                {/* <li className="total-cart-items">{`${this.totalItems(this.props.cartItems)}`}</li> */}
                                 {/* <li className="tax">{`--`}</li> */}
-                                <li className="shiping">{`FREE`}</li>
+                                <li className="shiping">{`free`}</li>
                                 <li className="estimated-total">{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
                             </ul>
                         </div>
@@ -131,7 +135,7 @@ class Cart extends React.Component {
                             <button onClick={(e) => this.checkout(this.props.cartItems)}>Proceed to checkout</button>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </div>;
     }

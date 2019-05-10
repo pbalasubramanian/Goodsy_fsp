@@ -58,7 +58,7 @@ class ReviewIndex extends React.Component {
             )
         });
         return (
-            <div>
+            <div className="reviews-div">
                 {/* <Rater interactive={false} rating={4} /> */}
                 <h3>Reviews: {this.renderProductRating()} ({reviews.length})</h3>
                 {/* <h3 id="average-rating"> {reviews.length ? "Average Rating: " + this.averageRating() + " " + "(" + reviews.length + ")" : "No reviews on this product yet!"} </h3> */}

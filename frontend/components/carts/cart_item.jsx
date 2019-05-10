@@ -15,11 +15,11 @@ class CartItem extends React.Component {
                 </Link>
                 <div className="cart-item-details">
                     <Link className="item-product-name" to={`products/${product.id}`} >{product.title}</Link>
-                    <li className="item-product-price">{`Price: $${product.price.toLocaleString()} each`}</li>
-                    <li className="item-product-quantity">{`Quantity: ${item.quantity}`}</li>
-                    <li className="item-product-subtotal">{`Subtotal: $${(
-                        item.quantity * product.price
-                    ).toLocaleString()}`}</li>
+                    <li className="item-product-price">{`$${product.price.toLocaleString()} each`}</li>
+                    <li className="item-product-quantity">{`${item.quantity}`}</li>
+                    {/* <li className="item-product-subtotal">{`Subtotal: $${( */}
+                        {/* item.quantity * product.price */}
+                    {/* ).toLocaleString()}`}</li> */}
                 
                 {/* <div className="remove-button"> */}
                     <button className="remove-button" onClick={(e) => deleteCartItem(item.id).then(() => { this.props.history.push("/cart") })}>

@@ -4,7 +4,11 @@ import ProductIndexItem from './product_index_item';
 class ProductIndex extends React.Component {
 
     componentDidMount() {
-        this.props.fetchProducts();
+        if (this.props.location.search === "") {
+            this.props.fetchProducts();
+        } else {
+            this.props.search(this.props.location.search.slice(7));
+        }
     }
 
     render() {

@@ -1,51 +1,56 @@
 $font-gr: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
-$font-lato: 'Lato', sans-serif;
-$font-mw: 'Merriweather', serif;
-$font-tr: 'Times New Roman';
+// $font-lato: 'Lato', sans-serif;
+// $font-mw: 'Merriweather', serif;
+// $font-tr: 'Times New Roman';
+
+
+.reviews-area {
+    // border: 1px solid black;
+    // border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: $font-gr;
+    font-weight: 100px;
+}
 
 .reviews-area li{
     display: flex; 
     flex-direction: column; 
     // border: 1px solid black;
-    font-family: $font-tr;
+    // font-family: $font-tr;
     font-weight: 100px;
     padding-left: 10px;
     padding-top: 10px;
 }
 
-.reviews-area {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-family: $font-tr;
-    font-weight: 100px;
-}
 
 #review-form-header h3{
     color: black; 
-    font-family: $font-tr;
+    // font-family: $font-tr;
     font-weight: 100px;
 }
 
 #show-comments {
     margin-left: 60px; 
     margin-right: 60px; 
-    // background-color: blue;
-    font-family: $font-tr;
+    // font-family: $font-tr;
     font-weight: 100px;
 }
 
 .review-form {
     // padding-left: 50px; 
-    // padding-right: 50px; 
-    // background-color: blue;
-    font-family: $font-tr;
-    font-weight: 100px;
+    // padding-right: 50px;
+    font-family: $font-gr;
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+    }
 }
 
 .submit-review, .delete-review-button {
     background-color: black;
     color: white;
+    font-size: 15px;
+    font-family: $font-gr;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
@@ -54,6 +59,13 @@ $font-tr: 'Times New Roman';
     border-radius: 3px;
 }
 
+.reviews-div {
+    font-family: $font-gr;
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
 .review-created-at {
     padding-left: 500px;
     padding-top: -20px;
