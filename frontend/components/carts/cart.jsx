@@ -117,7 +117,7 @@ class Cart extends React.Component {
                     <div className="cart-total-container">
                         <div className="cart-total-information">
                             <ul className="cart-total-left">
-                                <li>{`Item(s) total:`}</li>
+                                <li>{`Subtotal:`}</li>
                                 {/* <li className="total-cart-items">{`Total Items:`}</li> */}
                                 {/* <li className="tax">{`Tax:`}</li> */}
                                 <li className="shiping">{`Shipping:`}</li>

@@ -27,7 +27,7 @@ const ReviewIndexItem = (props) => {
     let dateObj = new Date(review.created_at);
     // alert(dateObj.toLocaleString());
 
-    if( !review.user ) {
+    if( review.user ) {
     return (
         <div className="reviews-area">
             <li>
