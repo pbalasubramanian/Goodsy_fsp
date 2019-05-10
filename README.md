@@ -34,4 +34,13 @@ Goodsy is an Etsy clone. It is an e-commerce shopping website where you can buy 
 ![alt text](https://github.com/pbalasubramanian/Goodsy_fsp/blob/master/mark_down_files/search.png "Search")
 
 # Technologies
-Rails
+Ruby on Rails
+Postgresql
+React
+Redux
+Javascript/ES6
+
+# Additional features
+* Likes
+* Follows
+* Wishlist
