@@ -7,9 +7,9 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            quantity: null,
+            quantity: 1,
             cart_id: null,
-            product_id: null
+            product_id: this.props.match.params.productId
         };
         this.addToCart = this.addToCart.bind(this);
     }
@@ -93,7 +93,7 @@ class ProductShow extends React.Component {
                                 </input> */}
                                 <select className="product_quantity"
                                     onChange={(e) => this.setState({ quantity: parseInt(e.target.value), product_id: this.props.product.id })}>
-                                    <option value="1" selected>1</option>
+                                    <option value="1" defaultValue>1</option>
                                     <option value="2"  >2</option>
                                     <option value="3"  >3</option>
                                     <option value="4"  >4</option>

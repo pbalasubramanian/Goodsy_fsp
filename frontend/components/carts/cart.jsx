@@ -8,18 +8,20 @@ class Cart extends React.Component {
         this.cartList = this.cartList.bind(this);
         this.calcTotal = this.calcTotal.bind(this);
         this.totalItems = this.totalItems.bind(this);
-    }
-
-    componentDidMount() {
-        // alert("out here");
-        if ( this.props.currentUser ) {
-            // alert("in here");
-            // alert(this.props.currentUser);
-            this.props.fetchProducts()
-                .then( (prod) => this.props.fetchCartItems(this.props.currentUser.cart.id) );
+        this.state = {
+            fetchComplete: false
         }
     }
 
+    componentDidMount() {
+        // debugger
+
+        if ( this.props.currentUser ) {
+            this.props.fetchProducts()
+                .then( (prod) => this.props.fetchCartItems(this.props.currentUser.cart.id)
+                        .then( () => this.setState( {fetchComplete: true} )) );
+        }
+    }
 
     cartList(cartItems, products, deleteCartItem) {
         if (!this.props.cartItems) {
@@ -96,6 +98,8 @@ class Cart extends React.Component {
         //         </Link>
         //     </div>;
         // }
+
+        if( !this.state.fetchComplete ) return null;
 
         return <div className="cart-main">
             {/* <h1>Shopping Cart</h1> */}
