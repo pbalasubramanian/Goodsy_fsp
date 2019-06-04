@@ -11,8 +11,9 @@ const ReviewIndexItem = (props) => {
     // let deleteReview = null;
     let editReview = null;
 
-    // alert(user_id.id)
-    // alert(review.reviewer_id)
+    // alert(user_id.id);
+    // alert(review.reviewer_id);
+    // alert(review.user);
     if( user_id ) {
         if (user_id.username === review.reviewer_id) {
             editReview =
@@ -27,28 +28,24 @@ const ReviewIndexItem = (props) => {
     let dateObj = new Date(review.created_at);
     // alert(dateObj.toLocaleString());
 
-    if( review.user ) {
-    return (
+    const r_item =
         <div className="reviews-area">
             <li>
                 <div className="review-block">
                     <div className="review-top-row">
                         <div className="review-name">
                             {review.user}
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            {dateObj.toLocaleString()}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {dateObj.toLocaleString()}
                         </div>
-                        <br/>
-                        {/* <div className="review-created-at"> */}
-                            {/* {Annotation.last.created_at.in_time_zone} */}
-                            {/* {review.user} */}
-                            {/* {dateObj.toLocaleString()} */}
-                        {/* </div> */}
+                        <br />
                     </div>
-                    {/* <div id="comment-rating-num">
-                        Rating: {comment.rating}
-                    </div> */}
                     <Rating
                         className="comment-rating"
                         emptySymbol="fa fa-star-o"
@@ -59,20 +56,62 @@ const ReviewIndexItem = (props) => {
                         {review.description}
                     </div>
                 </div>
-                <br />
-                <div id="editable-comment">
-                    <div id="delete-comment">
-                        <button className="delete-review-button" onClick={() => handleDelete(review.id)}>Delete review</button>
-                    </div>
-                    {/* <div id="edit-comment">{editComment}</div> */}
-                </div>
             </li>
-            <br/>
+            <br />
 
-        </div>
-    )
+        </div>;
+
+    if( user_id && review.user ) {
+        if( user_id.id === review.reviewer_id ) {
+            return (
+                <div className="reviews-area">
+                    <li>
+                        <div className="review-block">
+                            <div className="review-top-row">
+                                <div className="review-name">
+                                    {review.user}
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    {dateObj.toLocaleString()}
+                                </div>
+                                <br/>
+                                {/* <div className="review-created-at"> */}
+                                    {/* {Annotation.last.created_at.in_time_zone} */}
+                                    {/* {review.user} */}
+                                    {/* {dateObj.toLocaleString()} */}
+                                {/* </div> */}
+                            </div>
+                            {/* <div id="comment-rating-num">
+                                Rating: {comment.rating}
+                            </div> */}
+                            <Rating
+                                className="comment-rating"
+                                emptySymbol="fa fa-star-o"
+                                fullSymbol="fa fa-star"
+                                initialRating={review.rating}
+                            />
+                            <div id="comment-description">
+                                {review.description}
+                            </div>
+                        </div>
+                        <br />
+                        <div id="editable-comment">
+                            <div id="delete-comment">
+                                <button className="delete-review-button" onClick={() => handleDelete(review.id)}>Delete review</button>
+                            </div>
+                            {/* <div id="edit-comment">{editComment}</div> */}
+                        </div>
+                    </li>
+                    <br/>
+
+                </div>
+            )
+        } else {
+            return(r_item);
+        }
     } else {
-        return null;
+        // return null;
+        return (r_item);
     }
 
 }

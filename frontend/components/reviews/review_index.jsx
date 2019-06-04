@@ -11,7 +11,9 @@ class ReviewIndex extends React.Component {
 
     handleDelete(e) {
         e.preventDefault();
-        this.props.deleteReview(this.props.review.id);
+        // if(this.props.user_id === this.props.review.id ) {
+            this.props.deleteReview(this.props.review.id);
+        // }
     }
 
     componentDidMount() {
