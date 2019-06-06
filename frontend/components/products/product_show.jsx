@@ -27,7 +27,8 @@ class ProductShow extends React.Component {
             if (this.state.quantity) {
                 this.state.cart_id = this.props.currentUser.cart.id;
                 // alert(this.state.cart_id);
-                this.props.createCartItem(this.state);
+                this.props.createCartItem(this.state)
+                    .then(this.props.history.push("/cart"));
                     // .then( (item) => this.props.fetchCartItems(this.props.currentUser.cart.id)
                     // .then( (cartItems) => {
                     //     let counter = 0
@@ -43,7 +44,7 @@ class ProductShow extends React.Component {
                     //         $('#itemCount').html(counter).css('display', 'block');
                     //     }
                     // }));
-                window.alert(`${this.state.quantity} ${this.props.product.title}'s added to your cart!`);
+                // window.alert(`${this.state.quantity} ${this.props.product.title}'s added to your cart!`);
             } else {
                 window.alert("Please select a quantity");
             }

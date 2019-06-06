@@ -18,7 +18,7 @@ $font-gr: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid San
     border: 1px solid black;
     // font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
     // font-family: $font-mw;
-    padding-bottom: 38px;
+    // padding-bottom: 38px;
 }
 
 .empty-cart {
@@ -88,8 +88,9 @@ $font-gr: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid San
         padding-top: 10px; 
         padding-bottom: 10px; 
         border: 0px solid;
+        cursor: pointer;
         // border-radius: 5px;
-        margin-right: 12px
+        margin-right: 12px;
     // }
 }
 
