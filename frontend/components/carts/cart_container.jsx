@@ -3,12 +3,15 @@ import { connect } from 'react-redux';
 import { fetchCartItems, deleteCartItem } from '../../actions/cart_item_actions';
 import { fetchProducts } from '../../actions/product_actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+    // console.log("ownProps==" + ownProps);
+    return {
     cartItems: state.entities.cart.cartItems,
     cartProducts: state.entities.products,
-    // cartId: state.entities.cart.id
+    cartId: state.entities.cart.id,
     currentUser: state.entities.users[state.session.id]
-});
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchProducts: () => dispatch(fetchProducts()),

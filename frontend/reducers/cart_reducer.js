@@ -5,8 +5,8 @@ import { merge } from 'lodash';
 const cartReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
-        case RECEIVE_CURRENT_USER:
-            return action.currentUser.cart;
+        // case RECEIVE_CURRENT_USER:
+        //     return action.currentUser.cart;
         case RECEIVE_CART_ITEMS:
             let newState = Object.assign({}, state);
             let mergeState = merge({}, newState.cartItems, action.payload.cart_items);
@@ -16,8 +16,8 @@ const cartReducer = (state = {}, action) => {
             let newState1 = Object.assign({}, state);
             delete newState1.cartItems[action.cartItemId];
             return newState1;
-        case LOGOUT_CURRENT_USER:
-            return { cartItems: {} };
+        // case LOGOUT_CURRENT_USER:
+        //     return { cartItems: {} };
         default:
             return state;
     }

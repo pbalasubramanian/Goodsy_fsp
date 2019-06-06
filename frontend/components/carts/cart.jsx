@@ -14,12 +14,33 @@ class Cart extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
-
+        // alert("in here");
+        // alert("currUser==" + this.props.currentUser);
+        
         if ( this.props.currentUser ) {
             this.props.fetchProducts()
                 .then( (prod) => this.props.fetchCartItems(this.props.currentUser.cart.id)
                         .then( () => this.setState( {fetchComplete: true} )) );
+        } 
+        // else {
+        //     this.props.fetchProducts()
+        //         .then(this.props.history.push("/cart/"))
+        //         .then(() => this.setState({ fetchComplete: true }));
+        // }
+    }
+
+    componentDidUpdate() {
+        // alert("fetchComplete==" + this.state.fetchComplete);
+        // alert("currentUser==" + this.props.currentUser);
+
+        if(!this.props.currentUser) {
+            if(this.state.fetchComplete) this.setState({ fetchComplete: false });
+        } else {
+            if (!this.state.fetchComplete) {
+                this.props.fetchProducts()
+                    .then((prod) => this.props.fetchCartItems(this.props.currentUser.cart.id)
+                        .then(() => this.setState({ fetchComplete: true })));
+            }
         }
     }
 
@@ -90,17 +111,17 @@ class Cart extends React.Component {
     }
 
     render() {
-        // if (!this.props.cartItems) {
-        //     return <div className="empty-cart">
-        //         <p>Your cart is looking empty.</p>
-        //         <Link className="link-to-index" to="/products">
-        //             Click here to fill it up!
-        //         </Link>
-        //     </div>;
-        // }
-
-        if( !this.state.fetchComplete ) return null;
-
+        if( !this.state.fetchComplete || !this.props.cartItems ) {
+            return <div className="empty-cart">
+                 <p>Your cart is looking empty.</p>
+                 <Link className="link-to-index" to="/products">
+                     Click here to fill it up!
+                 </Link>
+             </div>;
+        }
+        
+        // alert(this.props.cartItems.length);
+        // if(this.props.cartItems.length !== undefined || this.props.cartItems.length !== 0) {
         return <div className="cart-main">
             {/* <h1>Shopping Cart</h1> */}
             <div className="cart-container">
@@ -142,6 +163,7 @@ class Cart extends React.Component {
                 {/* </div> */}
             </div>
         </div>;
+        // }
     }
 }
 
