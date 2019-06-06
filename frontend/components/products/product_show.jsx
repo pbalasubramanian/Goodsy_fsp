@@ -59,6 +59,13 @@ class ProductShow extends React.Component {
 
     render() {
         if (this.props.product) {
+            let quant = this.props.product.quantity;
+            let k=1;
+            let optionslist = [<option value="1" defaultValue>1</option>]; 
+            for (let i = 2; i <= quant; i++) {
+                optionslist.push(<option value={i}>{i}</option>);
+            }
+            // alert({optionslist});
             return (
                 <div className="product_show">
                     <div className="product_show_top_div">
@@ -92,9 +99,12 @@ class ProductShow extends React.Component {
                                 {/* <input type="text" className="product_quantity"
                                     onChange={(e) => this.setState({ quantity: parseInt(e.target.value), product_id: this.props.product.id })}>
                                 </input> */}
+
                                 <select className="product_quantity"
                                     onChange={(e) => this.setState({ quantity: parseInt(e.target.value), product_id: this.props.product.id })}>
-                                    <option value="1" defaultValue>1</option>
+                                    {optionslist}
+                                    
+                                    {/* <option value="1" defaultValue>1</option>
                                     <option value="2"  >2</option>
                                     <option value="3"  >3</option>
                                     <option value="4"  >4</option>
@@ -143,7 +153,7 @@ class ProductShow extends React.Component {
                                     <option value="47"  >47</option>
                                     <option value="48"  >48</option>
                                     <option value="49"  >49</option>
-                                    <option value="50"  >50</option>
+                                    <option value="50"  >50</option> */}
                                 </select>
                             </h4>
                             <div className="product_show_cart_div">
