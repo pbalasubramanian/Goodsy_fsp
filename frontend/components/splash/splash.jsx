@@ -18,7 +18,7 @@ class Splash extends React.Component {
                         </div>
                     </a>
 
-                    <a href="/" className="right-link">
+                    <a href="/#/products" className="right-link">
                         <div className="right">
                             <div className="right-up1">
                                 <div className="right-up">
