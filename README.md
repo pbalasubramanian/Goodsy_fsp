@@ -1,5 +1,7 @@
 # Goodsy
 
+[Goodsy Live](http://goodsy.herokuapp.com/#/)
+
 Goodsy is an Etsy clone. It is an e-commerce shopping website where you can buy and sell products. It uses React/Redux on the client side and Ruby-on-Rails/PostgreSQL on the server side. It uses AWS to store images.
 
 # Features
